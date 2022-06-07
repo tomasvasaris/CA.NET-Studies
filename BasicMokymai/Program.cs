@@ -1,4 +1,4 @@
-﻿namespace BasicMokymai
+﻿namespace BM001
 {
     internal class Program
     {
@@ -41,8 +41,6 @@
             Console.WriteLine("E1" + 
                 Environment.NewLine + "E2" + 
                 Environment.NewLine + "E3");
-            */
-
 
             Console.WriteLine("Write your name: ");
             var input = Console.ReadLine();
@@ -54,9 +52,7 @@
             Console.WriteLine("Your name is: {0}", name);
             Console.WriteLine($"First letter: {name[0]}, ASCII: {name[0]}.");
 
-
-
-
+            */
         }
     }
 }
