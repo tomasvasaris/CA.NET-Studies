@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            /*
+
             Console.WriteLine("Hello, World!");
             Console.WriteLine("");
 
@@ -38,14 +38,14 @@
             Console.WriteLine("Write something.");
             Console.WriteLine("First letter: \"{0}\"", Console.ReadLine()[0]);
 
-            Console.WriteLine("E1" + 
-                Environment.NewLine + "E2" + 
+            Console.WriteLine("E1" +
+                Environment.NewLine + "E2" +
                 Environment.NewLine + "E3");
 
             Console.WriteLine("Write your name: ");
             var input = Console.ReadLine();
             string name = "empty";
-            if(input is string)
+            if (input is string)
             {
                 name = input;
             }
@@ -66,7 +66,7 @@
 
             // Užduotis: Pardavimo menu
             Console.WriteLine("(1) Pirkti \n(2) Parduoti \n(3) Likučiai");
-            Console.WriteLine("\nPasirinkimas: \"" + Console.ReadKey().KeyChar +"\". Bandykite vėl");
+            Console.WriteLine("\nPasirinkimas: \"" + Console.ReadKey().KeyChar + "\". Bandykite vėl");
             Console.WriteLine("\nPasirinkimas: \"{0}\". Bandykite vėl", Console.ReadKey().KeyChar);
             Console.WriteLine($"\nPasirinkimas: \"{Console.ReadKey().KeyChar}\". Bandykite vėl");
 
@@ -115,7 +115,7 @@
                  *********     
 
             ".Replace("*", "\""));
-            
+
 
             // Tekstinio tipo kintamieji
 
@@ -126,7 +126,20 @@
             var tuscias = "";                 // empty variable
             string nullas = null;             // empty != null
 
-            */
+
+            // Implicit variables
+            var skaicius = 0;
+            var autoLong = 99999999999999;
+            var tekstuks = "tekstukas";
+            var datosVar = new DateTime(2022, 06, 08);
+            var fFloatas = 6.9f;
+
+
+            // KeyValuePair
+            KeyValuePair<int, string> raktasReiksme = new KeyValuePair<int, string>(10, "tekstas");
+            Console.WriteLine(raktasReiksme.Key);   // 10
+            Console.WriteLine(raktasReiksme.Value); // "tekstas"
+
         }
     }
 }
