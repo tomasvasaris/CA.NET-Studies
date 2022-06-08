@@ -129,18 +129,25 @@
             // Tower of Hanoi: 09
             // Pakeiskite visų elementų dizainą iš # į " , išveskite Tower of Hanoi
 
-            // Nauji kintamieji
+            /* Pirmas variantas su naujais kintamaisiais
             string towerHanoi_1b = "      \"|\"   ";
             string towerHanoi_2b = "     \"\"|\"\"  ";
             string towerHanoi_3b = "    \"\"\"|\"\"\" ";
-            string towerHanoi_4b = "   \"\"\"\"|\"\"\"\"";
+            string towerHanoi_4b = "   \"\"\"\"|\"\"\"\""; */
+
+            // Antras variantas su Replace funkcija
+            towerHanoi_0 = towerHanoi_0.Replace("#", "\"");
+            towerHanoi_1 = towerHanoi_1.Replace("#", "\"");
+            towerHanoi_2 = towerHanoi_2.Replace("#", "\"");
+            towerHanoi_3 = towerHanoi_3.Replace("#", "\"");
+            towerHanoi_4 = towerHanoi_4.Replace("#", "\"");
 
             Console.WriteLine($"Tower of Hanoi 09 \n\n" +
                 $"1eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_0}\n" +
-                $"2eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_1b}\n" +
-                $"3eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_2b}\n" +
-                $"4eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_3b}\n" +
-                $"5eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_4b}\n" +
+                $"2eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_1}\n" +
+                $"3eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_2}\n" +
+                $"4eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_3}\n" +
+                $"5eil.{towerHanoi_0}{towerHanoi_0}{towerHanoi_4}\n" +
                 $"       ---1stlp-------2stlp-------3stlp---- \n\n");
 
             Console.ReadKey();
@@ -160,6 +167,8 @@
                 $"4eil.{towerHanoi_3}{towerHanoi_3}{towerHanoi_3}\n" +
                 $"5eil.{towerHanoi_2}{towerHanoi_4}{towerHanoi_2}\n" +
                 $"       ---1stlp-------2stlp-------3stlp---- \n\n");
+
+            Console.ReadKey();
 
             // Tower End
 
