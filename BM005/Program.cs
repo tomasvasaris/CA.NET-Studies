@@ -142,12 +142,285 @@
             long sk = Convert.ToInt64(Console.ReadLine());
             Console.WriteLine($"Rezultatas: {++sk} {++sk} {++sk} {++sk} {++sk}"); // ++ after == doesn't work correctly
 
-            */
-
 
             // Paskaitos konspektai 15-06-2022
 
-            Console.WriteLine($"");
+            bool tiesa = true ;
+            bool melas = !tiesa;
+            Console.WriteLine($"Tiesa: {tiesa}. Melas: {melas}");
+
+            // Užduotis 10
+            Console.WriteLine("Įveskite skaičių nr1:");
+            double sk1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Įveskite skaičių vr2:");
+            double sk2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"Abu skaičiai yra vienodi:  {!(sk1 != sk2)}");
+            Console.WriteLine($"Abu skaičiai yra lyginiai: {(sk1 % 2 == 0) == (sk2 % 2 == 0)}");
+
+            */
+
+            // Užduotis 11
+            Console.WriteLine($"kanalas A __---___---___---___---___");
+            Console.WriteLine($"kanalas B ____---___---___---___---_");
+
+            Console.WriteLine($"\n" +
+                $"{(false && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false && false).ToString().Replace("True", "-").Replace("False", "_")}");
+
+            Console.WriteLine($"" +
+                $"{(false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false || false).ToString().Replace("True", "-").Replace("False", "_")}");
+
+            Console.WriteLine($"" +
+                $"{(false ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(true  ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(false ^ false).ToString().Replace("True", "-").Replace("False", "_")}");
+
+            Console.WriteLine($"" +
+                $"{(!(false && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false && false)).ToString().Replace("True", "-").Replace("False", "_")}");
+
+            Console.WriteLine($"" +
+                $"{(!(false || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(true  || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!(false || false)).ToString().Replace("True", "-").Replace("False", "_")}");
+
+            Console.WriteLine($"" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false).ToString().Replace("True", "-").Replace("False", "_")}");
+
+            Console.WriteLine($"" +
+                $"{(!false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || false).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!true  || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || true ).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!false || false).ToString().Replace("True", "-").Replace("False", "_")}");
+
+            Console.WriteLine($"" +
+                $"{(!((false || false) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || false) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || false) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || false) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || true ) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || true ) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || true ) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || false) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || false) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || false) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || true ) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || true ) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || true ) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || false) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || false) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || false) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || true ) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || true ) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || true ) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || false) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || false) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || false) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((true  || true ) && true )).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || true ) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || true ) && false)).ToString().Replace("True", "-").Replace("False", "_")}" +
+                $"{(!((false || false) && false)).ToString().Replace("True", "-").Replace("False", "_")}\n");
+
+            // komunikacijos pabaiga
+
+
+            Console.WriteLine($"A B F");
+            Console.WriteLine($"0 0 {(false || false).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"0 1 {(false || true ).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"1 0 {(true  || false).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"1 1 {(true  || true ).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine("");
+
+            Console.WriteLine($"A B F");
+            Console.WriteLine($"0 0 {(!false || false).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"0 1 {(!false || true ).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"1 0 {(!true  || false).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"1 1 {(!true  || true ).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine("");
+
+            Console.WriteLine($"A B F");
+            Console.WriteLine($"0 0 {(!(false || false)).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"0 1 {(!(false || true )).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"1 0 {(!(true  || false)).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine($"1 1 {(!(true  || true )).ToString().Replace("True", "1").Replace("False", "0")}");
+            Console.WriteLine("");
+
+            Console.WriteLine($"A B C F");
+            Console.WriteLine($"0 0 0 {true}");
+            Console.WriteLine($"0 0 1 {true}");
+            Console.WriteLine($"0 1 0 {true}");
+            Console.WriteLine($"0 1 1 {true}");
+            Console.WriteLine($"1 0 0 {true}");
+            Console.WriteLine($"1 0 1 {true}");
+            Console.WriteLine($"1 1 0 {true}");
+            Console.WriteLine($"1 1 1 {true}");
+            Console.WriteLine("");
 
         }
     }
