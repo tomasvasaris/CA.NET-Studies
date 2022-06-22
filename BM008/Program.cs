@@ -393,8 +393,6 @@
                     Console.WriteLine("ERROR!");
                     break;
             }
-            
-            */
 
 
             // UŽDUOTIS 07
@@ -452,21 +450,42 @@
             else Console.WriteLine(friendName3);
 
             Console.WriteLine("\n\n");
+            
+            */
 
 
             // UŽDUOTIS 08
 
             Console.WriteLine("Christmas cookies!");
 
-            Console.WriteLine("\nName of friend no.1: ");
-            string friendName1 = Console.ReadLine();
-            Console.WriteLine("Age of friend no.1: ");
-            int friendAge1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Date no.1 (yyyy-mm-dd): ");
+            DateTime date01 = Convert.ToDateTime(Console.ReadLine());
+            Console.WriteLine("Date no.2 (yyyy-mm-dd): ");
+            DateTime date02 = Convert.ToDateTime(Console.ReadLine());
+            Console.WriteLine("Date no.3 (yyyy-mm-dd): ");
+            DateTime date03 = Convert.ToDateTime(Console.ReadLine());
+            Console.WriteLine("Date no.4 (yyyy-mm-dd): ");
+            DateTime date04 = Convert.ToDateTime(Console.ReadLine());
+
+            Console.WriteLine($"\nInputs: \n{date01.ToString("yyyy-MM-dd")} \n{date02.ToString("yyyy-MM-dd")}");
+            Console.WriteLine($"{date03.ToString("yyyy-MM-dd")} \n{date04.ToString("yyyy-MM-dd")}");
 
 
+            /* 
+            
+            // 22-06-2022
 
+            Console.WriteLine("String manipulations");
 
+            char[] letters = { 'H', 'e', 'l', 'l', 'o' }; // array /masyvas
+            string greetings = new string(letters);       // string constructor
 
+            DateTime greetDay = DateTime.Today;
+            var greetingDate = $"{greetings}, date: {greetDay.ToString("yyyy-MM-dd")}";
+
+            Console.WriteLine(greetingDate);
+
+            */
 
 
         }
