@@ -28,7 +28,7 @@
             
             // Lyties apskaičiavimas
             string firstNo = regAsmens.Substring(0, 1);
-            string regLytis = firstNo; //"N/A";
+            string regLytis = firstNo;
 
             if      (firstNo == "1" || firstNo == "3" || firstNo == "5")
             {
