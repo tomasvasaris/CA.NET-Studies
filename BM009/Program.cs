@@ -8,13 +8,10 @@
             // Užduotis: Amžiaus Melagis!
 
 
-            // Testinis vardas/pavardė: Vardenis Pavardenis
-            // Testinis asmens kodas:   39402110000
-            // Testinė gimimo data 01:  1994-02-11
-            // Testinė gimimo data 02:  1994-02-13
+            // Testinis asmens kodas:   39407110000
 
             // Duomenų įvedimas
-            Console.WriteLine($"Vartotojo registracijos forma.");
+            Console.WriteLine("Vartotojo registracijos forma.\n");
 
             Console.Write("Įveskite savo pilną vardą ir pavardę:     ");
             string regVardas = Console.ReadLine();
@@ -26,9 +23,9 @@
             string regAmzius = Console.ReadLine();
 
             Console.Write("Įveskite savo gimimo datą (neprivaloma):  ");
-            string regData  = Console.ReadLine();
+            string regData   = Console.ReadLine();
 
-
+            
             // Lyties apskaičiavimas
             string firstNo = regAsmens.Substring(0, 1);
             string regLytis = firstNo; //"N/A";
@@ -70,13 +67,18 @@
             int kodoAmzius = dabarDT.Year - gimDienaDT.Year;
             if ((gimDienaDT.Month > dabarDT.Month) || (gimDienaDT.Month == dabarDT.Month) && (gimDienaDT.Day >= dabarDT.Day))
             {
-                kodoAmzius++;
+                kodoAmzius--;
             }
 
 
             // Patikimumo apskaičiavimas
             string patikimumas = "";
-            DateTime regDataDT = Convert.ToDateTime(regData);
+            DateTime regDataDT = DateTime.Today; // jeigu pirma neįvedu kažkokios reikšmės, kodas neveikia :/
+
+            if (regData != "")
+            {
+                regDataDT = Convert.ToDateTime(regData);
+            }
 
             if (regData == "" && regAmzius == "")
             {
@@ -84,7 +86,7 @@
             }
             else
             {
-                if (regData != "" || regAmzius != "")
+                if ((regData != "" || regAmzius != "") && !(regData != "" && regAmzius != ""))
                 {
                     if (regData != "")
                     {
