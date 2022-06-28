@@ -1,6 +1,6 @@
 ﻿namespace BM011
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -24,32 +24,31 @@
 
 
             // Užduotis 09
-            int tarpaiGale;
             Console.WriteLine("Įveskite bet kokį tekstą:");
-            Console.WriteLine($"Tarpai priekyje: {TarpaiPriekyIrGale(Console.ReadLine(), out tarpaiGale)}");
+            Console.WriteLine($"Tarpai priekyje: {TarpaiPriekyIrGale(Console.ReadLine(), out int tarpaiGale)}");
             Console.WriteLine($"Tarpai gale:     {tarpaiGale}");
 
 
 
         }
 
-        private static int TarpaiPriekyIrGale(string? tekstas, out int tarpaiGale)
+        public static int TarpaiPriekyIrGale(string? tekstas, out int tarpaiGale)
         {
             tarpaiGale = tekstas.Length - tekstas.TrimEnd().Length;
             return tekstas.Length - tekstas.TrimStart().Length;
         }
 
-        private static object TarpaiPrieky(string? tekstas)
+        public static object TarpaiPrieky(string? tekstas)
         {
             return tekstas.Length - tekstas.TrimStart().Length;
         }
 
-        private static object TarpaiGale(string? tekstas)
+        public static object TarpaiGale(string? tekstas)
         {
             return tekstas.Length - tekstas.TrimEnd().Length;
         }
 
-        private static int ZodziuKiekis(string? sakinys)
+        public static int ZodziuKiekis(string? sakinys)
         {
             if(sakinys.Trim().Replace(" ", "") != "")
             {
