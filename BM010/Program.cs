@@ -5,7 +5,9 @@
         public static void Main(string[] args)
         {
             /* 
-            
+
+            */
+
             WriteHelloToScreen();                   // Metodas numeris vienas. Nieko nepriima. Nieko negrąžina
             double b = GetSomeNo();                 // Nieko nepriima. Grąžina double'ą
             
@@ -45,8 +47,6 @@
             Console.WriteLine(LabasIvestis(vardas));
             GerosDienosIvestis(vardas);
 
-            */
-
 
             // Užduotis 03
 
@@ -66,7 +66,6 @@
                 Console.WriteLine("Sudėjimas neįmanomas");
             }
 
-            Console.WriteLine("\n\n");
 
 
             // Užduotis 04
@@ -87,7 +86,7 @@
 
         private static int TekstasBeTarpuAplink(string? manoTekstas)
         {
-            return manoTekstas.Length;
+            return manoTekstas.Length - manoTekstas.Trim().Length;
         }
 
         private static double Sudejimas(double a, double b)
