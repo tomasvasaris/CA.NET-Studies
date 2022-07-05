@@ -68,8 +68,6 @@ namespace BM012_Test
             Assert.AreEqual(expected, actual);
         }
 
-        */
-
         [TestMethod]
         public void Skaiciuotuvas_test0()
         {
@@ -113,5 +111,23 @@ namespace BM012_Test
             var actual = BM012.Program.Skaiciuotuvas(fake1, fake2, fake3);
             Assert.AreEqual(expected, actual);
         }
+
+        */
+
+        [TestMethod]
+        public void Poligono_test3()
+        {
+            var fake1 = 3;
+            var fake2 = 1;
+            var fake3 = 1;
+            var fake4 = 1;
+            var expectedA = 0.5;
+            var expectedK = 180;
+            BM012.Program.PoligonoPlotas(fake1, fake2, fake3, fake4, out double A, out double K);
+            Assert.AreEqual(expectedA, A);
+            Assert.AreEqual(expectedK, K);
+        }
+
+
     }
 }
