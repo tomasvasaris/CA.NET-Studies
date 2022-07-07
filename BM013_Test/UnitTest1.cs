@@ -3,6 +3,7 @@ namespace BM013_Test
     [TestClass]
     public class UnitTest1
     {
+        /*
         [TestMethod]
         public void TestDNR_1()
         {
@@ -13,5 +14,6 @@ namespace BM013_Test
             var actual = BM013.Program.Skaiciuotuvas(fake1, fake2, fake3);
             Assert.AreEqual(expected, actual);
         }
+        */
     }
 }
