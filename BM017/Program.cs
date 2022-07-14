@@ -13,31 +13,48 @@ namespace BM017
             //Užduotis: Daugybos lentelė
             //Console.WriteLine(MultiTable());
 
-            /*
-            Sukurti skaiciuotuva. Ijungus programa mes turetume gauti pranesima 
-            “1. Nauja operacija 2. Testi su rezultatu 3. Iseiti”. Pasirinkus 1 turetu ismesti ”
-            1. Sudetis
-            2. Atimtis
-            3. Daugyba
-            4. Dalyba”
-            Pasirinkus viena is operaciju programa turetu paprasyti naudotoja ivesti pirma ir antra skaicius, 
-            o gale isvesti rezultata ant ekrano ir uzklausti ar naudotojas nori atlikti nauja operacija ar testis su rezultatu. Sudeties pvz:
-            “1
-            15
-            45
-            Rezultatas: 60
-            1. Nauja operacija 2. Testi su rezultatu 3. Iseiti”
-            Pasirinkus 2 programa turetu paprasyti ivesti kokia operacija turetu buti atliekama ir paprasyti TIK SEKANCIO SKAITMENS. 
-            Pasirinkus 3 programa turetu issijungti. Visa kita turetu veikti tokiu pat budu.
-            BONUS1: Iskelkite operacijas i metodus
-            BONUS2: Parasykite operacijoms validacijas pries ivestus neteisingus skaicius. Pvz: dalyba is nulio, neteisingu ivesciu prevencija 
-            pvz kada tikimasi gauti skaiciu, bet gaunamas char arba string.
-            BONUS3: Parasyti unit testus uztikrinant operaciju veikima
-            BONUS4: Parasyti laipsnio pakelimo ir saknies traukimo operacijas
-            */
-
             //Užduotis: Skaičiuotuvas
-            Calculator();
+            //Calculator();
+
+            //Užduotis: Figūra 101
+            //Figure();
+
+            //Užduotis: Skaičiai atvirkščiai
+            ReverseNumbers();
+        }
+
+        static void ReverseNumbers()
+        {
+            int input = IntAsk();
+            int output = 0;
+            bool isWorking = true;
+
+            while (isWorking)
+            {
+                output = output * 10 + Convert.ToInt32((Convert.ToDouble(input) / 10 - input / 10) * 10);
+                input = input / 10;
+                isWorking = input <= 0 ? false : true;
+            }
+
+            Console.WriteLine($"\nReversed: \n{output}");
+        }
+
+        static void Figure()
+        {
+            int input = IntAsk("number of lines");
+            int nr = 1;
+            Console.WriteLine();
+
+            for (int i = 0; i < input; i++)
+            {
+                for (int j = 0; j < i+1; j++)
+                {
+                    Console.Write(nr);
+                    if (nr == 0) { nr++; } else { nr--; }
+                }
+                if (i % 2 == 0) { nr=0; } else { nr=1; }
+                Console.WriteLine();
+            }
         }
 
         static void Calculator()
@@ -75,7 +92,7 @@ namespace BM017
             if (input1 == 0) { input1 = IntAsk(); }
             input2 = IntAsk();
 
-            Console.WriteLine("Valid operations: \n1) Sum \n2) Subtract \n3) Multiply \n4) Divide \n");
+            Console.WriteLine("Valid operations: \n1) Sum \n2) Subtract \n3) Multiply \n4) Divide \n5) Exponentiation \n6) Square root");
 
             while (true)
             {
@@ -90,6 +107,10 @@ namespace BM017
                         return input1 + input2;
                     case 4:
                         return input1 / input2;
+                    case 5:
+                        return Math.Pow(input1, input2);
+                    case 6:
+                        return Math.Sqrt(input1);
                     default:
                         Console.WriteLine("That is not a valid selection, try again \n");
                         break;
