@@ -140,6 +140,7 @@
             if (isCorect == false) { Console.WriteLine("Sąskaita užblokuota!"); }
         }
 
+
         static void MonetosMetimas()
         {
             var randomObjektas = new Random();

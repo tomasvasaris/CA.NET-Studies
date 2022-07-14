@@ -14,13 +14,13 @@ namespace BM017
             //Console.WriteLine(MultiTable());
 
             //Užduotis: Skaičiuotuvas
-            //Calculator();
+            Calculator();
 
             //Užduotis: Figūra 101
             //Figure();
 
             //Užduotis: Skaičiai atvirkščiai
-            ReverseNumbers();
+            //ReverseNumbers();
         }
 
         static void ReverseNumbers()
@@ -57,6 +57,15 @@ namespace BM017
             }
         }
 
+        private static void FigureByKarolisS()
+        {
+            int lines = IntAsk("number of lines");
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 1; i <= lines; i++)
+                Console.WriteLine(sb.Insert(0, i % 2).ToString());
+        }
+
         static void Calculator()
         {
             bool isWorking = true;
@@ -83,7 +92,7 @@ namespace BM017
                         break;
                 }
 
-                Console.WriteLine($"\nYour result: {result} \n");
+                if (isWorking == true) { Console.WriteLine($"\nYour result: {result} \n"); }
             }
         }
 
