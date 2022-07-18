@@ -29,5 +29,14 @@ namespace BasicTests
             var actual = BM019.Program.sortArrayFromLargest(test);
             CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void sortArrayABC()
+        {
+            char[] test =     new char[] { 'd', 'A', 'z', 'o', 'd' };
+            char[] expected = new char[] { 'A', 'd', 'd', 'o', 'z' };
+            var actual = BM019.Program.sortArrayABC(test);
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }
