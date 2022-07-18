@@ -1,4 +1,5 @@
 ﻿using BasicMethods;
+using System.Text;
 
 namespace BM018
 {
@@ -26,14 +27,30 @@ namespace BM018
             */
 
 
-            SchoolArray(); // Užduotis[3]. Įvesti mokinių skaičių, tada mokinių vardus, tada atspausdinti vardus atvirkštine tvarka
+            // Užduotis[3]
+            // Įvesti mokinių skaičių, tada mokinių vardus, tada atspausdinti vardus atvirkštine tvarka
+            Console.WriteLine(SchoolArray(MyMods.IntAsk("the number of students")));  
 
 
         }
 
-        static void SchoolArray()
+        static string SchoolArray(int number)
         {
-            int number = MyMods.IntAsk("number of students");
+            string[] names = SchoolNames(number);
+            StringBuilder reversed = new StringBuilder();
+            reversed.AppendLine();
+
+            for (int i = 0; i < number; i++)
+            {
+                reversed.Append(names[number-i-1]);
+                reversed.AppendLine();
+            }
+
+            return reversed.ToString();
+        }
+
+        static string[] SchoolNames(int number)
+        {
             string[] names = new string[number];
 
             for (int i = 0; i < number; i++)
@@ -42,12 +59,7 @@ namespace BM018
                 names[i] = Console.ReadLine();
             }
 
-            Console.WriteLine();
-
-            for (int i = 0; i < number; i++)
-            {
-                Console.WriteLine(names[number-i-1]);
-            }
+            return names;
         }
     }
 }

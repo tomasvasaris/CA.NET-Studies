@@ -1,4 +1,5 @@
 ﻿//using BasicMethods;
+using System.Text;
 
 namespace BasicMethods
 {
