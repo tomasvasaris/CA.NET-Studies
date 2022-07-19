@@ -18,17 +18,13 @@
             // Validuojama kad tai char simboliai
             // Surikiuojamas masyvas pagal abėcėlę
 
-            char[] test = new char[] { 'd', 'A', 'z', 'o', 'd', 'i' };
-            test = sortArrayABC(test);
-            Console.WriteLine($"{test[0]}, {test[1]}, {test[2]}, {test[3]}, {test[4]}, {test[5]}");
-
         }
 
         public static char[] sortArrayABC(char[] input)
         {
             for (int i = 0; i < (input.Length - 1); i++)
             {
-                if (Convert.ToInt32(input[i]) > Convert.ToInt32(input[i + 1]))
+                if (input[i] > input[i + 1])
                 {
                     char temp = input[i];
                     input[i] = input[i + 1];

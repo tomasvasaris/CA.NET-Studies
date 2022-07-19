@@ -15,10 +15,4 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BM018\BM018.csproj" />
-    <ProjectReference Include="..\BM019\BM019.csproj" />
-    <ProjectReference Include="..\BM020\BM020.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -33,9 +33,27 @@ namespace BasicTests
         [TestMethod]
         public void sortArrayABC()
         {
-            char[] test =     new char[] { 'd', 'A', 'z', 'o', 'd' };
-            char[] expected = new char[] { 'A', 'd', 'd', 'o', 'z' };
+            char[] test =     new char[] { 'z', 'A', 's' };
+            char[] expected = new char[] { 'A', 's', 'z' };
             var actual = BM019.Program.sortArrayABC(test);
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void largestInList()
+        {
+            List<int> test = new List<int> { 5, 1, 6, 8, 7 };
+            int expected = 8;
+            var actual = BM020.Program.largestInList(test);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void largerThanLargest()
+        {
+            List<int> test     = new List<int> { 5, 1, 6, 8, 7 };
+            List<int> expected = new List<int> { 5, 1, 6, 8, 7, 9 };
+            List<int> actual = BM020.Program.largerThanLargest(test);
             CollectionAssert.AreEqual(expected, actual);
         }
     }
