@@ -22,7 +22,7 @@ namespace BasicTests
         }
 
         [TestMethod]
-        public void sortArrayFromLargest()
+        public void SortArrayFromLargest()
         {
             int[] test = new int[] { 1, 12, 3, -5 };
             int[] expected = { 12, 3, 1, -5 };
@@ -31,7 +31,7 @@ namespace BasicTests
         }
 
         [TestMethod]
-        public void sortArrayABC()
+        public void SortArrayABC()
         {
             char[] test =     new char[] { 'z', 'A', 's' };
             char[] expected = new char[] { 'A', 's', 'z' };
@@ -40,7 +40,7 @@ namespace BasicTests
         }
 
         [TestMethod]
-        public void largestInList()
+        public void LargestInList()
         {
             List<int> test = new List<int> { 5, 1, 6, 8, 7 };
             int expected = 8;
@@ -49,12 +49,30 @@ namespace BasicTests
         }
 
         [TestMethod]
-        public void largerThanLargest()
+        public void LargerThanLargest()
         {
             List<int> test     = new List<int> { 5, 1, 6, 8, 7 };
             List<int> expected = new List<int> { 5, 1, 6, 8, 7, 9 };
             List<int> actual = BM020.Program.largerThanLargest(test);
             CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ListAverage()
+        {
+            List<int> test = new List<int> { 5, 1, 6, 8, 7 };
+            int expected = (5+1+6+8+7)/5;
+            int actual = BM022.Program.ListAverage(test);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ListPositivity()
+        {
+            var tested = new List<int> { 5, -1, 0 };
+            var expect = new List<string> { "Pos", "Neg", "Pos" };
+            var actual = BM022.Program.ListPositivity(tested);
+            CollectionAssert.AreEqual(expect, actual);
         }
     }
 }

@@ -19,6 +19,7 @@
     <ProjectReference Include="..\BM018\BM018.csproj" />
     <ProjectReference Include="..\BM019\BM019.csproj" />
     <ProjectReference Include="..\BM020\BM020.csproj" />
+    <ProjectReference Include="..\BM022\BM022.csproj" />
   </ItemGroup>
 
 </Project>
