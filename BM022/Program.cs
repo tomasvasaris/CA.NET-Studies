@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BM022
+﻿namespace BM022
 {
     public class Program
     {
@@ -22,10 +19,9 @@ namespace BM022
             {
                 if (name == "Eve") { Console.WriteLine(name); }
             }
-
         }
 
-        // Užduotis[1]
+        // Užduotis[Test01]
         // Integer sąrašo vidurkis
         public static int ListAverage(List<int> input)
         {
@@ -39,7 +35,7 @@ namespace BM022
             return (total / input.Count);
         }
 
-        // Užduotis[2]
+        // Užduotis[Test02]
         // Grąžina ar skaičius sąraše neigiamas ar teigiamas
         public static List<string> ListPositivity(List<int> input)
         {
@@ -55,21 +51,41 @@ namespace BM022
             return posList;
         }
 
-        // Užduotis[3]
-        // 
-        public static List<string> UNKNOWN(List<int> input)
+        // Užduotis[01] || Ištraukti skaičių
+        // Metodas priima tekstą ir gražina tik jame esančius skaičius
+        // Kitas metodas surikiuoja skaičius (m>d, foreach, naujas List'as)
+        public static string GetNumbersInText(string input)
         {
-            var posList = new List<string>();
+            string output = "";
 
-            foreach (int number in input)
+            foreach (char key in input)
             {
-                if (number >= 0)
-                { posList.Add("Pos"); }
-                else
-                { posList.Add("Neg"); }
+                if (Int32.TryParse(key.ToString(), out _))
+                { output += key; }
             }
 
-            return posList;
+            return output;
         }
+        public static List<int> SortNumbersFromText(string input)
+        {
+            List<int> output = new List<int>(); 
+
+            foreach (char key in input)
+            {
+                output.Add(key - 48);
+            }
+
+            output.Sort();
+            return output;
+        }
+
+        /*
+        //  Parašyti metodą IsmetytiZodzius, kuris priima sakini, bet grazina nauja zodziu List sudaryta tik is zodziu, kurie ilgesni nei 5 raides ir yra surikiuoti abeceles tvarka.
+        //  Tada parasykite metoda, kuris priima 2 zodziu sarasus, juos sujungia i viena kolekcija naudojant ciklus ir atspausdina ekrane.
+        //  PRIMINIMAS: Kad isskirti string i atskirus zodzius naudokite pavyzdinisString.Split(' ')
+        //  PVZ: Ivedame: "Labas as esu Kodelskis ir labai megstu programuoti". 
+        //  Programa be rusiavimo grazina mums: as esu ir Labas Kodelskis labai megstu programuoti
+        //  Programa su rusiavimu grazina mums: as esu ir Kodelskis labai Labas megstu programuoti
+        */
     }
 }

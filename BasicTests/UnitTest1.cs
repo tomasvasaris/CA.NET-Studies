@@ -74,5 +74,23 @@ namespace BasicTests
             var actual = BM022.Program.ListPositivity(tested);
             CollectionAssert.AreEqual(expect, actual);
         }
+
+        [TestMethod]
+        public void GetNumbersInText()
+        {
+            var tested = "as5d1af16f";
+            var expect = "5116";
+            var actual = BM022.Program.GetNumbersInText(tested);
+            Assert.AreEqual(expect, actual);
+        }
+
+        [TestMethod]
+        public void SortNumbersFromText()
+        {
+            var tested = "5116";
+            var expect = new List<int> { 1, 1, 5, 6 };
+            var actual = BM022.Program.SortNumbersFromText(tested);
+            CollectionAssert.AreEqual(expect, actual);
+        }
     }
 }
