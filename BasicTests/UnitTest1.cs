@@ -92,5 +92,14 @@ namespace BasicTests
             var actual = BM022.Program.SortNumbersFromText(tested);
             CollectionAssert.AreEqual(expect, actual);
         }
+
+        [TestMethod]
+        public void ScrambleWords()
+        {
+            var tested = new List<string> { "Labas", "as", "esu", "Tomas" };
+            var expect = new List<string> { "as", "esu", "Labas", "Tomas" };
+            var actual = BM022.Program.ScrambleWords(tested);
+            CollectionAssert.AreEqual(expect, actual);
+        }
     }
 }

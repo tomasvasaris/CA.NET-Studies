@@ -20,5 +20,21 @@ namespace BasicMethods
                 else { return Convert.ToInt32(input); }
             }
         }
+
+        public static void TestWrite(string[] input)
+        {
+            foreach (string item in input)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public static void TestWrite(List<string> input)
+        {
+            foreach (string item in input)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }

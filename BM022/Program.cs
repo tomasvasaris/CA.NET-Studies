@@ -1,10 +1,12 @@
-﻿namespace BM022
+﻿using BasicMethods;
+
+namespace BM022
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            // ForEach loop/ciklas
+            /*/ ForEach loop/ciklas
 
             int[] pointArray = new int[10];
             pointArray[0] = 1;
@@ -19,6 +21,10 @@
             {
                 if (name == "Eve") { Console.WriteLine(name); }
             }
+            
+            */
+
+            PrintDeck(SortDeck(ConstructDeck()));
         }
 
         // Užduotis[Test01]
@@ -79,13 +85,80 @@
             return output;
         }
 
-        /*
-        //  Parašyti metodą IsmetytiZodzius, kuris priima sakini, bet grazina nauja zodziu List sudaryta tik is zodziu, kurie ilgesni nei 5 raides ir yra surikiuoti abeceles tvarka.
-        //  Tada parasykite metoda, kuris priima 2 zodziu sarasus, juos sujungia i viena kolekcija naudojant ciklus ir atspausdina ekrane.
-        //  PRIMINIMAS: Kad isskirti string i atskirus zodzius naudokite pavyzdinisString.Split(' ')
-        //  PVZ: Ivedame: "Labas as esu Kodelskis ir labai megstu programuoti". 
-        //  Programa be rusiavimo grazina mums: as esu ir Labas Kodelskis labai megstu programuoti
-        //  Programa su rusiavimu grazina mums: as esu ir Kodelskis labai Labas megstu programuoti
-        */
+        // Užduotis[02] || Išmėtyti žodžius
+        // n/a
+        public static List<string> ScrambleWords(List<string> input)
+        {
+            var longer = new List<string>();
+            var shortr = new List<string>();
+
+            foreach (string item in input)
+            {
+                if (item.Length >= 5)
+                { longer.Add(item); } else
+                { shortr.Add(item); }
+            }
+
+            shortr.AddRange(longer);
+            return shortr;
+        }
+
+        // 21-07-2022
+
+        // Užduotis[03] || Statome Kaladę
+        // Parašyti metodą kuris sukonstruoja kaladę iš dviejų string list'ų
+        // Paaršyti kitą metodą kuris surikiuoja kaladę pagal abėcėlę
+        // Atspausdinti visą kaladę ekrane
+
+        public static List<string> ConstructDeck()
+        {
+            var suits = new List<string>()
+            {
+                "Sirdziu",
+                "Bugnu",
+                "Vynu",
+                "Kryziu",
+            };
+
+            var faces = new List<string>()
+            {
+                "Tuzas",
+                "Dviake",
+                "Triake",
+                "Keturake",
+                "Penkake",
+                "Sesake",
+                "Septynake",
+                "Astuonake",
+                "Devynakės",
+                "Desimtake",
+                "Valetas",
+                "Dama",
+                "Karalius",
+            };
+
+            var cards = new List<string>();
+
+            foreach (string suit in suits)
+            {
+                foreach (string face in faces)
+                {
+                    cards.Add(suit + " " + face);
+                }
+            }
+
+            return cards;
+        }
+
+        public static List<string> SortDeck(List<string> cards) { cards.Sort(); return cards; }
+
+        public static void PrintDeck(List<string> cards)
+        {
+            foreach (string card in cards)
+            {
+                Console.WriteLine(card);
+            }
+        }
+
     }
 }
