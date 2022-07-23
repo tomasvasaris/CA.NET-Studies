@@ -24,7 +24,33 @@ namespace BM022
             
             */
 
-            PrintDeck(SortDeck(ConstructDeck()));
+
+            var suits = new List<string>()
+            {
+                "Sirdziu",
+                "Bugnu",
+                "Vynu",
+                "Kryziu",
+            };
+
+            var faces = new List<string>()
+            {
+                "Tuzas",
+                "Dviake",
+                "Triake",
+                "Keturake",
+                "Penkake",
+                "Sesake",
+                "Septynake",
+                "Astuonake",
+                "Devynakės",
+                "Desimtake",
+                "Valetas",
+                "Dama",
+                "Karalius",
+            };
+
+            PrintDeck(SortDeck(ConstructDeck(suits, faces)));
         }
 
         // Užduotis[Test01]
@@ -110,33 +136,8 @@ namespace BM022
         // Paaršyti kitą metodą kuris surikiuoja kaladę pagal abėcėlę
         // Atspausdinti visą kaladę ekrane
 
-        public static List<string> ConstructDeck()
+        public static List<string> ConstructDeck(List<string> suits, List<string> faces)
         {
-            var suits = new List<string>()
-            {
-                "Sirdziu",
-                "Bugnu",
-                "Vynu",
-                "Kryziu",
-            };
-
-            var faces = new List<string>()
-            {
-                "Tuzas",
-                "Dviake",
-                "Triake",
-                "Keturake",
-                "Penkake",
-                "Sesake",
-                "Septynake",
-                "Astuonake",
-                "Devynakės",
-                "Desimtake",
-                "Valetas",
-                "Dama",
-                "Karalius",
-            };
-
             var cards = new List<string>();
 
             foreach (string suit in suits)
